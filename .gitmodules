@@ -1,0 +1,3 @@
+[submodule "firefox-css/lichess-css"]
+	path = firefox-css/lichess-css
+	url = https://github.com/nobriot/lichess_css

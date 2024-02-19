@@ -9,7 +9,7 @@ import re
 
 #%% Constants
 EMOJI_URL = "https://unicode.org/Public/emoji/latest/emoji-test.txt"
-OUTPUT_FILE = "vscode-snippets/html-emojis.code-snippets"
+OUTPUT_FILE = "html-emojis.code-snippets"
 PARSING_REGEX = "(?P<code>1F[0-9a-fA-F ]+).*\s*;\s*fully-qualified\s*#(?P<description>.*?(?P<alias>[a-zA-Z ]*))\n"
 
 #%% Functions
