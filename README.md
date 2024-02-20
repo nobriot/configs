@@ -35,5 +35,5 @@ vscode-snippets/generate-emoji-substitutions-snippets.py
 
 ## Firefox CSS
 
-Refer to [Firefox CSS/Lichess CSS](./firefox-css/lichess-css/readme.md). This 
+Configuration for Lichess using Firefox CSS. This 
 is a submodule of my [lichess_css repo](https://github.com/nobriot/lichess_css).
