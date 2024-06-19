@@ -17,20 +17,25 @@ fi
 tmux list-windows -t "$SESSION_NAME" | grep -q "$WINDOW_NAME"
 
 # If the window doesn't exist, create it and set up the panes
-if [ $? -ne 0 ]; then
+if [ $? != 0 ]; then
     # Create a new window
     tmux new-window -t "$SESSION_NAME" -n "$WINDOW_NAME"
 
     # Split the window into panes
-    tmux split-window -h -t "$SESSION_NAME:$WINDOW_NAME"        # Split vertically
-    tmux split-window -v -t "$SESSION_NAME:$WINDOW_NAME.0"       # Split the left pane horizontally
+    tmux split-window -v -t "$SESSION_NAME:$WINDOW_NAME"        # Split horizontally
+    tmux split-window -h -t "$SESSION_NAME:$WINDOW_NAME.1"      # Split vertically
 
     # Resize the bottom pane to 30% of the screen
-    tmux resize-pane -t "$SESSION_NAME:$WINDOW_NAME.1" -y 30     # Resize bottom pane to 30% of the screen
+    tmux resize-pane -t "$SESSION_NAME:$WINDOW_NAME.3" -y 30     # Resize bottom pane to 30% of the screen
 
     # Run commands in specific panes
-    tmux send-keys -t "$SESSION_NAME:$WINDOW_NAME.1" 'htop' C-m  # Run htop in the bottom pane
-    tmux send-keys -t "$SESSION_NAME:$WINDOW_NAME.0" 'cd /home/nicolas/workspace/schnecken_bot && cargo run --release' C-m  # Run cargo in the top left pane
+    # Schnecken bot
+    tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.1
+    tmux send-keys -t "$SESSION_NAME:$WINDOW_NAME.1" 'cd /home/nicolas/workspace/schnecken_bot && cargo run --release' C-m  # Run cargo in the top left pane
+
+    # htop
+    tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.3
+    tmux send-keys -t "$SESSION_NAME:$WINDOW_NAME.3" 'htop' C-m  # Run htop in the bottom pane
 fi
 
 # Switch to the window
