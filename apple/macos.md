@@ -18,3 +18,7 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 defaults read -g KeyRepeat
 defaults write -g KeyRepeat -int 1
 ```
+
+## Terminal.app settings
+
+https://superuser.com/questions/660013/resizing-pane-is-not-working-for-tmux-on-mac

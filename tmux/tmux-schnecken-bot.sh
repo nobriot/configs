@@ -25,8 +25,6 @@ if [ $? != 0 ]; then
     tmux split-window -v -t "$SESSION_NAME:$WINDOW_NAME"        # Split horizontally
     tmux split-window -h -t "$SESSION_NAME:$WINDOW_NAME.1"      # Split vertically
 
-    # Resize the bottom pane to 30% of the screen
-    tmux resize-pane -t "$SESSION_NAME:$WINDOW_NAME.3" -y 30     # Resize bottom pane to 30% of the screen
 
     # Run commands in specific panes
     # Schnecken bot
@@ -37,6 +35,9 @@ if [ $? != 0 ]; then
     tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.3
     tmux send-keys -t "$SESSION_NAME:$WINDOW_NAME.3" 'htop' C-m  # Run htop in the bottom pane
 fi
+
+# Resize the bottom pane to 30% of the screen
+tmux resize-pane -t "$SESSION_NAME:$WINDOW_NAME.3" -y 35%     # Resize bottom pane to 35% of the screen
 
 # Switch to the window
 tmux select-window -t "$SESSION_NAME:$WINDOW_NAME"
