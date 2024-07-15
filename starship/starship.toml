@@ -1,7 +1,5 @@
 format = """
 $fill\
-$username\
-$hostname\
 $line_break\
 $directory\
 $git_branch\
@@ -12,33 +10,41 @@ $sudo\
 $character
 """
 
+right_format = """
+$status\
+$username\
+$hostname
+"""
+
+palette = 'custom'
+
 [nodejs]
 format = "[$symbol($version )]($style)"
 
 [fill]
 symbol = "-"
-style = "bold black"
+style = "bold fg:237"
 
 [directory]
-style = "blue"
+style = "custom_blue"
 read_only = " "
 truncation_length = 8
 truncate_to_repo = false
-#repo_root_style = "underline blue"
+repo_root_style = "custom_blue underline"
 truncation_symbol = '…/'
 
 [directory.substitutions]
 '~/workspace' = '~/w'
 
 [character]
-success_symbol = "[#](bright-purple)"
+success_symbol = "[#](fg:105)"
 error_symbol = "[#](red)"
 vicmd_symbol = "[❮](green)"
 
 [git_branch]
 symbol = " "
 format = "[$symbol$branch]($style) "
-style = "green"
+style = "fg:78"
 
 [jobs]
 symbol = ""
@@ -68,22 +74,23 @@ style = "bold black"
 min_time = 500
 
 [status]
-format = '[$symbol$status]($style) '
-symbol = ''
+style = 'red'
+symbol = '↵'
 success_symbol = ''
+format = '[$status $symbol ]($style)'
+map_symbol = true
 disabled = false
-style = "bold black"
 
 [username]
 style_root = 'bold red'
-style_user = 'bold black'
+style_user = 'bold fg:237'
 show_always = true
 format = " [$user@]($style)"
 disabled = false
 
 [hostname]
 ssh_only = false
-format = '[$hostname](black)'
+format = '[$hostname](bold fg:237)'
 trim_at = 'spaceblog.dk'
 disabled = false
 
@@ -104,11 +111,17 @@ symbol = '⚡ '
 disabled = false
 format = "[$symbol]($style)"
 
+[os]
+format = "[$symbol]($style)"
+style = "bold fg:237"
+disabled = true
+
 [custom.separator]
 when = true
 command = "x=0; while [ $x -lt $(tput cols) ]; do echo -n '─';let x=$x+1; done;"
 style = "red"
 format = "[$output]($style)"
 
-
-
+# Define custom colors
+[palettes.custom]
+custom_blue = '32'
