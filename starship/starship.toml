@@ -23,7 +23,7 @@ format = "[$symbol($version )]($style)"
 
 [fill]
 symbol = "-"
-style = "bold fg:237"
+style = "bold grey"
 
 [directory]
 style = "custom_blue"
@@ -82,15 +82,15 @@ map_symbol = true
 disabled = false
 
 [username]
-style_root = 'bold red'
-style_user = 'bold fg:237'
+style_root = 'bold grey'
+style_user = 'bold grey'
 show_always = true
 format = " [$user@]($style)"
 disabled = false
 
 [hostname]
 ssh_only = false
-format = '[$hostname](bold fg:237)'
+format = '[$hostname](bold grey)'
 trim_at = 'spaceblog.dk'
 disabled = false
 
@@ -113,7 +113,7 @@ format = "[$symbol]($style)"
 
 [os]
 format = "[$symbol]($style)"
-style = "bold fg:237"
+style = "bold grey"
 disabled = true
 
 [custom.separator]
@@ -125,3 +125,4 @@ format = "[$output]($style)"
 # Define custom colors
 [palettes.custom]
 custom_blue = '32'
+grey = '237'
