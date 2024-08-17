@@ -94,6 +94,9 @@ fkill() {
   fi
 }
 
+# Keyboard overdrive
+xset r rate 200 60
+
 # Copy/paste
 alias copy="xsel --input --clipboard"
 alias paste="xsel --output --clipboard"
