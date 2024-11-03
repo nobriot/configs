@@ -64,6 +64,12 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 alias compress-pics='find . -iname "*.jpg" -exec convert {} -resize 1200x {} \;'
 alias install-discord='find ~/Downloads -iname "discord*.deb" -exec sudo dpkg -i {} \; -exec rip {} \;'
 
+# Git aliases
+alias gf="git fetch --all -p"
+alias gl="git log --oneline"
+alias gp="git pull"
+alias gbr="git branch -vv"
+
 # Some eza shortcuts
 alias l="eza --icons --git"
 alias ll="l --long"
