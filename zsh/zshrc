@@ -142,6 +142,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+if !delta --version &> /dev/null
+then
+    echo "Installing git-delta"
+    cargo install git-delta
+fi
 
 if !spf --version &> /dev/null
 then
