@@ -102,7 +102,6 @@ fkill() {
 
 if [[ "$(uname)" == "Darwin" ]]; then
     # MacOS specific settings
-    echo "Running on macOS"
     alias copy="pbcopy"
     alias paste="pbpaste"
 elif [[ "$(uname)" == "Linux" ]]; then

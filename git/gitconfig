@@ -1,0 +1,44 @@
+[user]
+  email = github@nico-ow.mozmail.com
+  name = Nicolas Woltmann
+
+[alias]
+  c = commit -v
+  sw = switch
+  coi = !git checkout $(git branch --sort=committerdate | fzf)
+  s = status
+  br = branch
+  dd = diff --cached
+  l = log --oneline --graph
+  cp = cherry-pick
+
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+  pager = delta
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[diff]
+  colorMoved = default
+
+[delta]
+  navigate = true
+  line-numbers = true
+  true-color = always
+
+[merge]
+  conflictstyle = diff3
+
+[help]
+  autocorrect = 10
+
