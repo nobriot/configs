@@ -102,6 +102,7 @@ fkill() {
 
 if [[ "$(uname)" == "Darwin" ]]; then
     # MacOS specific settings
+    echo "Running on macOS"
     alias copy="pbcopy"
     alias paste="pbpaste"
 elif [[ "$(uname)" == "Linux" ]]; then
@@ -158,3 +159,6 @@ then
     echo "Installing spf"
     bash -c "$(curl -sLo- https://superfile.netlify.app/install.sh)"
 fi
+
+# Added by alacritty
+fpath+=${ZDOTDIR:-~}/.zsh_functions

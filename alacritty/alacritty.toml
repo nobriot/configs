@@ -1,0 +1,12 @@
+[font]
+normal = {family = "MesloLGM Nerd Font", style="Regular"}
+
+[window]
+startup_mode = "Windowed"
+opacity = 0.95
+padding = {x = 10, y=5}
+
+# [selection]
+# save_to_clipboard = true
+[env]
+term = "xterm-256color"

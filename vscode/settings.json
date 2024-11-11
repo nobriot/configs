@@ -1,0 +1,86 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.formatOnSave": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.renderLineHighlight": "all",
+    "files.autoSave": "afterDelay",
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#96af0910"
+    },
+    "rust-analyzer.completion.snippets.custom": {
+        "Arc::new": {
+            "postfix": "arc",
+            "body": "Arc::new(${receiver})",
+            "requires": "std::sync::Arc",
+            "description": "Put the expression into an `Arc`",
+            "scope": "expr"
+        },
+        "Rc::new": {
+            "postfix": "rc",
+            "body": "Rc::new(${receiver})",
+            "requires": "std::rc::Rc",
+            "description": "Put the expression into an `Rc`",
+            "scope": "expr"
+        },
+        "Box::pin": {
+            "postfix": "pinbox",
+            "body": "Box::pin(${receiver})",
+            "requires": "std::boxed::Box",
+            "description": "Put the expression into a pinned `Box`",
+            "scope": "expr"
+        },
+        "Ok": {
+            "postfix": "ok",
+            "body": "Ok(${receiver})",
+            "description": "Wrap the expression in a `Result::Ok`",
+            "scope": "expr"
+        },
+        "Err": {
+            "postfix": "err",
+            "body": "Err(${receiver})",
+            "description": "Wrap the expression in a `Result::Err`",
+            "scope": "expr"
+        },
+        "Some": {
+            "postfix": "some",
+            "body": "Some(${receiver})",
+            "description": "Wrap the expression in an `Option::Some`",
+            "scope": "expr"
+        }
+    },
+    "cSpell.userWords": [
+        "bongcloud",
+        "centipawn",
+        "centipawns",
+        "freefly",
+        "nnue",
+        "Woltmann",
+        "zwave"
+    ],
+    "workbench.settings.applyToAllProfiles": [ ],
+    "extensions.supportUntrustedWorkspaces": {},
+    "cSpell.enableFiletypes": [
+        "rust"
+    ],
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        }
+    },
+    "indenticator.showHover": false,
+    "indenticator.showIndentGuide": true,
+    "window.customTitleBarVisibility": "auto",
+    "editor.minimap.enabled": false,
+}
