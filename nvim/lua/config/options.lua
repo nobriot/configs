@@ -1,8 +1,11 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
+vim.api.nvim_create_autocmd("Filetype", { pattern = "rust", command = "set colorcolumn=100" })
+
 --
 -- Decrease update time
 vim.opt.timeoutlen = 500
@@ -56,3 +59,6 @@ vim.opt.diffopt:append("linematch:60")
 
 -- Smooth scrolling
 vim.opt.smoothscroll = true
+
+-- Supposed to be used to opt out of files types with completion
+vim.g.copilot_filetypes = "{ '*': v:true,  'python': v:true  }"

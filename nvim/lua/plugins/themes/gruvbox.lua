@@ -6,7 +6,7 @@ return {
     opts = {
       overrides = {
         -- ["@lsp.type.method"] = { bg = "#ff9900" },
-        ["@comment.lua"] = { bg = "#000000", undercurl = true },
+        -- ["@comment.lua"] = { bg = "#000000" },
       },
     },
   },

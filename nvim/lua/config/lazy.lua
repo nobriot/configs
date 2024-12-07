@@ -20,6 +20,10 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
     { import = "plugins" },
+    { import = "plugins.themes" },
+    { import = "plugins.ui" },
+    { import = "plugins.ai" },
+    --{ import = "lazyvim.plugins.extras.ai.copilot-chat" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -30,7 +34,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "gruxbox", "vscode" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update

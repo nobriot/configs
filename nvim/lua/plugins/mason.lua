@@ -3,7 +3,6 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        -- python
         "ruff-lsp",
         "pyright",
         "black",
@@ -18,6 +17,13 @@ return {
 
         -- docker
         "dockerfile-language-server",
+
+        -- PHP / HTML
+        "html-lsp",
+        "phpactor",
+
+        -- JSON
+        "jq",
 
         -- javascript/typescript
         "prettierd",
