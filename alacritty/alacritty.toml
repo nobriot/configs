@@ -44,4 +44,10 @@ bindings = [
 {key = "l", mods="Alt", chars =  "\u0002l" },
 # More pane shortcuts
 {key = "x", mods="Alt", chars =  "\u0002x" },
+# Tmux copy mode
+{key = "v", mods="Alt", chars =  "\u0002[" },
+{key = "y", mods="Alt", chars =  "\u0002]" },
+# nvim shortcuts
+{key = "w", mods="Alt", chars =  "\u001b:wa\n" },
+{key = "q", mods="Alt", chars =  "\u001b:qa\n" },
 ]
