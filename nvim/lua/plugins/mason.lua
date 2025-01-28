@@ -31,7 +31,7 @@ return {
         "eslint-lsp",
 
         -- rust
-        "rustfmt",
+        --"rustfmt",
         "rust-analyzer",
       },
     },

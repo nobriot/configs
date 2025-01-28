@@ -42,6 +42,7 @@ return {
         },
         ["P"] = { "toggle_preview", config = { use_float = false } },
       },
+      width = 30,
     },
     default_component_configs = {
       indent = {

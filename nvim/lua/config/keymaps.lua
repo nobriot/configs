@@ -6,7 +6,7 @@ vim.api.nvim_set_keymap("n", "<F2>", "i🙂<Esc>", { noremap = true })
 -- I do not like macros, I like visual blocks instead
 vim.keymap.set("n", "q", "<C-Q>")
 vim.keymap.set("n", "Q", "q")
-vim.keymap.set("n", "<Leader>ww", ":write<CR>", { silent = true, desc = "Save current buffer" })
+vim.keymap.set("n", "<Leader>ww", ":wa<CR>", { silent = true, desc = "Save all buffers" })
 vim.keymap.set("n", "<Leader>wa", ":wa<CR>", { silent = true, desc = "Save all buffers" })
 
 -- Search
@@ -54,3 +54,8 @@ vim.keymap.set("n", "<leader>m", "`", { desc = "Go to mark" })
 -- Substitutions
 vim.keymap.set("v", "u", "~", { noremap = true, desc = "Switch case" })
 vim.keymap.set("n", "S", "ggVG:s/", { noremap = true, desc = "Global substitution" })
+
+-- Parentheses
+vim.keymap.set("n", "<leader>d[", "di[vhp ", { noremap = true, desc = "Delete surrounding square brackets" })
+vim.keymap.set("n", "<leader>d(", "di(vhp ", { noremap = true, desc = "Delete surrounding parentheses" })
+vim.keymap.set("n", "<leader>d{", "di{vhp ", { noremap = true, desc = "Delete surrounding curlies" })
