@@ -132,17 +132,38 @@ then
 fi
 eval "$(starship init zsh)"
 
+# Zoxide
+if !zoxide --version &> /dev/null
+then
+  echo "Installing zoxide"
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
+eval "$(zoxide init --cmd j zsh)"
+
 # Python pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+if !rustup --version &> /dev/null
+then
+    echo "Installing rust"
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
 if !delta --version &> /dev/null
 then
     echo "Installing git-delta"
     cargo install git-delta
 fi
+
+if !atuin --version &> /dev/null
+then
+    echo "Installing atuin"
+    cargo install atuin
+fi
+
 
 # Added by alacritty
 fpath+=${ZDOTDIR:-~}/.zsh_functions
