@@ -123,6 +123,14 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+
+# Install rust
+if !rustup --version &> /dev/null
+then
+    echo "Installing rust"
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
 # Starship
 #export STARSHIP_CONFIG=~/.config/starship.toml
 if !starship --version &> /dev/null
@@ -146,11 +154,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-if !rustup --version &> /dev/null
-then
-    echo "Installing rust"
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-fi
 
 if !delta --version &> /dev/null
 then

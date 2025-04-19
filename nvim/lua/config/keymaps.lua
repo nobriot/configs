@@ -53,7 +53,7 @@ vim.keymap.set("n", "<leader>m", "`", { desc = "Go to mark" })
 
 -- Substitutions
 vim.keymap.set("v", "u", "~", { noremap = true, desc = "Switch case" })
-vim.keymap.set("n", "S", "ggVG:s/", { noremap = true, desc = "Global substitution" })
+vim.keymap.set("n", "<leader>S", "ggVG:s/", { noremap = true, desc = "Global substitution" })
 
 -- Parentheses
 vim.keymap.set("n", "<leader>d[", "di[vhp ", { noremap = true, desc = "Delete surrounding square brackets" })
