@@ -1,0 +1,128 @@
+format = """
+$fill\
+$line_break\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$sudo\
+$character
+"""
+
+right_format = """
+$status\
+$username\
+$hostname
+"""
+
+palette = 'custom'
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+
+[fill]
+symbol = "-"
+style = "bold grey"
+
+[directory]
+style = "custom_blue"
+read_only = " "
+truncation_length = 8
+truncate_to_repo = false
+repo_root_style = "custom_blue underline"
+truncation_symbol = '…/'
+
+[directory.substitutions]
+'~/workspace' = '~/w'
+
+[character]
+success_symbol = "[#](fg:105)"
+error_symbol = "[#](red)"
+vicmd_symbol = "[❮](green)"
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "fg:78"
+
+[jobs]
+symbol = ""
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+only_nonzero_diffs = true
+added_style = 'bold green'
+deleted_style = 'bold red'
+format = '(\[[+$added]($added_style)/[-$deleted]($deleted_style)\] )'
+ignore_submodules = true
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "bold black"
+min_time = 500
+
+[status]
+style = 'red'
+symbol = '↵'
+success_symbol = ''
+format = '[$status $symbol ]($style)'
+map_symbol = true
+disabled = false
+
+[username]
+style_root = 'bold grey'
+style_user = 'bold grey'
+show_always = true
+format = " [$user@]($style)"
+disabled = false
+
+[hostname]
+ssh_only = false
+format = '[$hostname](bold grey)'
+trim_at = 'spaceblog.dk'
+disabled = false
+
+[memory_usage]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold black"
+format = "[$time]($style)"
+
+[sudo]
+style = 'bold red'
+symbol = '⚡ '
+disabled = false
+format = "[$symbol]($style)"
+
+[os]
+format = "[$symbol]($style)"
+style = "bold grey"
+disabled = true
+
+[custom.separator]
+when = true
+command = "x=0; while [ $x -lt $(tput cols) ]; do echo -n '─';let x=$x+1; done;"
+style = "red"
+format = "[$output]($style)"
+
+# Define custom colors
+[palettes.custom]
+custom_blue = '32'
+grey = '237'

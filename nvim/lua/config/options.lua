@@ -63,6 +63,3 @@ vim.opt.smoothscroll = true
 
 -- Supposed to be used to opt out of files types with completion
 vim.g.copilot_filetypes = "{ '*': v:true,  'python': v:true  }"
-
--- Transparent background fo snacks
-vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "NONE" })

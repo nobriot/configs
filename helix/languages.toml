@@ -6,6 +6,7 @@ file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
+language-servers = ["rust-analyzer"]
 
 [language.auto-pairs]
 '(' = ")"
@@ -13,3 +14,39 @@ indent = { tab-width = 2, unit = "  " }
 '[' = ']'
 '"' = '"'
 '`' = '`'
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman"]
+
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server"]
+
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+
+[[language]]
+name = "go"
+language-servers = ["gopls"]
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-langserver"]
