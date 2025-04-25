@@ -1,0 +1,63 @@
+theme = "my_theme"
+
+[editor]
+true-color = true
+cursorline = true
+undercurl = true
+bufferline = "multiple"
+line-number = "relative"
+rulers = [80, 100]
+scrolloff = 12
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "╎"
+render = true
+skip-levels = 1
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+auto-signature-help = false
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+# left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "version-control"]
+# center = []
+# right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+# 
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+"C-w" = ":wa"
+"C-x" = ":xa"
+"A-/" = "repeat_last_motion"
+"H" = "goto_first_nonwhitespace"
+"L" = "goto_line_end"
+V = ["select_mode", "extend_to_line_bounds"]
+D = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection"]
+j = "move_line_down"
+k = "move_line_up"
+"%" = "match_brackets"
+
+left = ":buffer-previous"
+right = ":buffer-next"
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.insert]
+esc = ["collapse_selection", "normal_mode"]
