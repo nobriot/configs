@@ -30,6 +30,7 @@ hidden = false
 auto-signature-help = false
 display-progress-messages = true
 display-messages = true
+display-inlay-hints = true
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
@@ -50,10 +51,9 @@ newline = "none"
 enable = true
 
 [keys.normal]
-"C-w" = ":wa"
-"C-x" = ":xa"
-"C-q" = ":qa"
-"A-w" = ":qa"
+"A-w" = ":wa"
+"A-x" = ":xa"
+"A-q" = ":qa"
 "H" = ["select_mode", "goto_first_nonwhitespace", "normal_mode"]
 "L" = ["select_mode", "goto_line_end", "normal_mode"]
 V = ["select_mode", "extend_to_line_bounds"]
@@ -69,7 +69,10 @@ esc = ["collapse_selection", "keep_primary_selection"]
 "æ" = "@i{}<esc>"
 "ø" = "@i[]<esc>"
 
-[keys.normal.g.u]
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
+
+[keys.normal.space.u]
 p = ":pipe ccase --to pascal"
 c = ":pipe ccase --to camel"
 u = ":pipe ccase --to uppercamel"

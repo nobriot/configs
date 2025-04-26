@@ -51,6 +51,6 @@ bindings = [
 {key = "v", mods="Alt", chars =  "\u0002[" },
 {key = "y", mods="Alt", chars =  "\u0002]" },
 # nvim shortcuts
-{key = "w", mods="Alt", chars =  "\u001b:wa\n" },
-{key = "q", mods="Alt", chars =  "\u001b:qa\n" },
+# {key = "w", mods="Alt", chars =  "\u001b:wa\n" },
+# {key = "q", mods="Alt", chars =  "\u001b:qa\n" },
 ]
