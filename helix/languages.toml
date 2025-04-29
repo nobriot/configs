@@ -23,6 +23,11 @@ language-servers = ["marksman"]
 name = "python"
 language-servers = ["pyright"]
 
+[language.formatter]
+command = "black"
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
 [[language]]
 name = "html"
 language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
@@ -30,10 +35,13 @@ language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
 [[language]]
 name = "json"
 language-servers = ["vscode-json-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [[language]]
 name = "yaml"
 language-servers = ["yaml-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = true
 
 [[language]]
 name = "bash"
@@ -50,3 +58,8 @@ language-servers = ["gopls"]
 [[language]]
 name = "dockerfile"
 language-servers = ["docker-langserver"]
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
