@@ -52,7 +52,7 @@ enable = true
 
 [keys.normal]
 "A-w" = ":wa"
-"A-x" = ":xa"
+"A-X" = ":xa"
 "A-q" = ":qa"
 "H" = ["select_mode", "goto_first_nonwhitespace", "normal_mode"]
 "L" = ["select_mode", "goto_line_end", "normal_mode"]
@@ -70,17 +70,17 @@ esc = ["collapse_selection", "keep_primary_selection"]
 # Easy insertions
 "ø" = "@i[]<left><esc>"
 "æ" = "@i{}<left><esc>"
+"Æ" = "@i``<left><esc>"
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
 
 [keys.normal.space.u]
-p = ":pipe ccase --to pascal"
 c = ":pipe ccase --to camel"
 C = ":pipe ccase --to Uppercamel"
-k = ":pipe ccase --to kebab"
 s = ":pipe ccase --to snake"
-u = ":pipe ccase --to screamingsnake"
+l = ":pipe ccase --to lower"
+u = ":pipe ccase --to upper"
 
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"]
@@ -90,3 +90,10 @@ H = "goto_first_nonwhitespace"
 L = "goto_line_end"
 u = "switch_case"
 esc = ["collapse_selection", "normal_mode"]
+
+[keys.select.space.u]
+c = ":pipe ccase --to camel"
+C = ":pipe ccase --to Uppercamel"
+s = ":pipe ccase --to snake"
+l = ":pipe ccase --to lower"
+u = ":pipe ccase --to upper"

@@ -5,6 +5,7 @@ normal = {family = "MesloLGM Nerd Font", style="Regular"}
 startup_mode = "Windowed"
 opacity = 0.95
 padding = {x = 10, y=5}
+option_as_alt = "OnlyLeft"
 
 [selection]
 save_to_clipboard = true
@@ -49,7 +50,7 @@ bindings = [
 {key = "x", mods="Alt", chars =  "\u0002x" },
 # Tmux copy mode
 {key = "v", mods="Alt", chars =  "\u0002[" },
-{key = "y", mods="Alt", chars =  "\u0002]" },
+{key = "p", mods="Alt", chars =  "\u0002]" },
 # nvim shortcuts
 # {key = "w", mods="Alt", chars =  "\u001b:wa\n" },
 # {key = "q", mods="Alt", chars =  "\u001b:qa\n" },

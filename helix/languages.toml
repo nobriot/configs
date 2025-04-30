@@ -22,9 +22,6 @@ language-servers = ["marksman"]
 [[language]]
 name = "python"
 language-servers = ["pyright"]
-
-[language.formatter]
-command = "black"
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
 
