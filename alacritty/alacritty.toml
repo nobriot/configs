@@ -38,6 +38,9 @@ bindings = [
 {key = "5", mods="Alt", chars =  "\u00025"  }, 
 {key = "6", mods="Alt", chars =  "\u00026"  }, 
 {key = "7", mods="Alt", chars =  "\u00027"  }, 
+{key = "7", mods="Alt | Shift", chars =  "\\"  }, 
+{key = "8", mods="Alt | Shift", chars =  "{"  }, 
+{key = "9", mods="Alt | Shift", chars =  "}"  },
 # Also with the arrows
 {key = "ArrowLeft", mods="Alt", chars =  "\u0002\u0070"  }, 
 {key = "ArrowRight", mods="Alt", chars =  "\u0002\u006e"  }, 
