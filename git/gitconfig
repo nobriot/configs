@@ -17,7 +17,7 @@
   defaultBranch = main
 
 [core]
-  editor = nvim
+  editor = hx
   pager = delta
 
 [filter "lfs"]

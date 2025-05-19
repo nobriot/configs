@@ -74,6 +74,8 @@ esc = ["collapse_selection", "keep_primary_selection"]
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
+"æ" = "@gla{}<left><esc>"
+"," = "@gla;<esc>"
 
 [keys.normal.space.u]
 c = ":pipe ccase --to camel"
