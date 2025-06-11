@@ -7,6 +7,7 @@ roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
 language-servers = ["rust-analyzer"]
+rulers = [100]
 
 [language.auto-pairs]
 '(' = ")"
@@ -18,12 +19,14 @@ language-servers = ["rust-analyzer"]
 [[language]]
 name = "markdown"
 language-servers = ["marksman"]
+rulers = [80]
 
 [[language]]
 name = "python"
 language-servers = ["pyright"]
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
+rulers = [88]
 
 [[language]]
 name = "html"
