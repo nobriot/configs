@@ -1,3 +1,5 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
 $fill\
 $line_break\
@@ -11,6 +13,7 @@ $character
 """
 
 right_format = """
+$python\
 $status\
 $username\
 $hostname
@@ -99,6 +102,10 @@ symbol = " "
 
 [rust]
 symbol = " "
+
+[python]
+format = '[\[${pyenv_prefix}(${version} )($virtualenv)\]]($style)'
+style = 'yellow bold'
 
 [time]
 disabled = false
