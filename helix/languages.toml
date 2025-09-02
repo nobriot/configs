@@ -2,6 +2,10 @@
 command = "pyrefly"
 args = ["lsp"]
 
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
 [[language]]
 name = "rust"
 scope = "source.rust"
@@ -27,8 +31,7 @@ rulers = [80]
 
 [[language]]
 name = "python"
-language-servers = ["pyrefly", "pyright"]
-formatter = { command = "black", args = ["--quiet", "-"] }
+language-servers = ["ruff", "pyrefly", "pyright"]
 auto-format = true
 rulers = [88]
 

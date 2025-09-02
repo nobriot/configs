@@ -13,8 +13,8 @@ $character
 """
 
 right_format = """
-$python\
 $status\
+$python\
 $username\
 $hostname
 """
@@ -22,7 +22,7 @@ $hostname
 palette = 'custom'
 
 [nodejs]
-format = "[$symbol($version )]($style)"
+format = "[$symbol($version)]($style)"
 
 [fill]
 symbol = "-"
@@ -104,8 +104,8 @@ symbol = " "
 symbol = " "
 
 [python]
-format = '[\[${pyenv_prefix}(${version} )($virtualenv)\]]($style)'
-style = 'yellow bold'
+format = '[\[${version}( $virtualenv)\]]($style)'
+style = 'cyan bold'
 
 [time]
 disabled = false
