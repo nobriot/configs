@@ -98,7 +98,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 elif [[ "$(uname)" == "Linux" ]]; then
     # Linux settings
     # Keyboard overdrive
-    xset r rate 200 60
+    xset r rate 175 30
     # Map Caps-locks to Es
     setxkbmap -option caps:escape
     #Copy/paste
