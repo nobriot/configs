@@ -1,3 +1,30 @@
+# Base config located here:
+# https://github.com/helix-editor/helix/blob/master/runtime/themes/gruvbox.toml
+# https://github.com/helix-editor/helix/blob/master/runtime/themes/gruvbox_dark_hard.toml
+# 
+# Format:
+# key = { fg = "#ffffff", bg = "#000000", underline = { color = "#ff0000", style = "curl"}, modifiers = ["bold", "italic"] }
+# 
+#
+# Note: Removing a key ,e.g. bg = {}, will avoir drawing it, which can be used
+# to e.g. keep the color of the underlying text (for the cursor), or make the
+# ui background transparent with my terminal settings
 
 inherits = "gruvbox_dark_hard"
-"ui.background" ={}
+
+"ui.selection" = { bg = "bg2" }
+"ui.selection.primary" = { bg = "bg2" }
+
+"ui.background" = {}
+"ui.popup" = { bg = "bg1" }
+"ui.menu" = { bg = "bg0_s" }
+
+# Looks line the more specific defs don't really do anything (statusline.normal, statusline.insert, etc.)
+# One day it'll start changing colors
+"ui.statusline" = { fg = "fg1", bg = {} }
+
+"ui.cursor" = { fg = {} }
+"ui.cursorline.primary" = { bg = "bg0_s" }
+"ui.cursorline.secondary" = { bg = "bg1" }
+
+"ui.virtual.ruler" = { bg = "bg0" }

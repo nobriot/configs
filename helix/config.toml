@@ -6,7 +6,7 @@ cursorline = true
 undercurl = true
 bufferline = "multiple"
 line-number = "relative"
-rulers = [80]
+rulers = [100]
 scrolloff = 12
 end-of-line-diagnostics = "disable"
 
@@ -84,8 +84,8 @@ k = "move_visual_line_up"
 "ret" = ["open_below", "normal_mode"]
 left = ":buffer-previous"
 right = ":buffer-next"
-up = "move_selection_lines_up"
-down = "move_selection_lines_down"
+up = "move_selection_lines_up"                                   # Note: only works with my fork
+down = "move_selection_lines_down"                               # Note: only works with my fork
 # up = [
 #   "extend_to_line_bounds",
 #   "yank_main_selection_to_clipboard",
