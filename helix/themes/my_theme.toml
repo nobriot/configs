@@ -26,5 +26,8 @@ inherits = "gruvbox_dark_hard"
 "ui.cursor" = { fg = {} }
 "ui.cursorline.primary" = { bg = "bg0_s" }
 "ui.cursorline.secondary" = { bg = "bg1" }
+"ui.cursor.insert" = { fg = "blue0", bg = "blue0" }
+"ui.cursor.normal" = { fg = "bg1", bg = "gray" }
+"ui.cursor.select" = { fg = "orange0", bg = "orange0" }
 
 "ui.virtual.ruler" = { bg = "bg0" }

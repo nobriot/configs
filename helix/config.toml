@@ -3,9 +3,11 @@ theme = "my_theme"
 [editor]
 true-color = true
 cursorline = true
+color-modes = true
 undercurl = true
 bufferline = "multiple"
 line-number = "relative"
+completion-replace = true
 rulers = [100]
 scrolloff = 12
 end-of-line-diagnostics = "disable"
