@@ -12,6 +12,15 @@ rulers = [100]
 scrolloff = 12
 end-of-line-diagnostics = "disable"
 
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+"'" = "'"
+
 [editor.inline-diagnostics]
 cursor-line = "disable"
 other-lines = "disable"

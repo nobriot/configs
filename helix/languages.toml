@@ -12,17 +12,26 @@ scope = "source.rust"
 injection-regex = "rust"
 file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
+formatter = { command = "rustup", args = [
+  "run",
+  "nightly",
+  "rustfmt",
+], stdin = false }
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
 language-servers = ["rust-analyzer"]
 rulers = [100]
 
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
 [language.auto-pairs]
-'(' = ")"
+'(' = ')'
 '{' = '}'
 '[' = ']'
 '"' = '"'
 '`' = '`'
+'<' = '>'
 
 [[language]]
 name = "markdown"

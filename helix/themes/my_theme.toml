@@ -6,7 +6,7 @@
 # key = { fg = "#ffffff", bg = "#000000", underline = { color = "#ff0000", style = "curl"}, modifiers = ["bold", "italic"] }
 # 
 #
-# Note: Removing a key ,e.g. bg = {}, will avoir drawing it, which can be used
+# Note: Removing a key ,e.g. key = {}, will avoid drawing it, which can be used
 # to e.g. keep the color of the underlying text (for the cursor), or make the
 # ui background transparent with my terminal settings
 
@@ -21,9 +21,9 @@ inherits = "gruvbox_dark_hard"
 
 # Looks line the more specific defs don't really do anything (statusline.normal, statusline.insert, etc.)
 # One day it'll start changing colors
-"ui.statusline" = { fg = "fg1", bg = {} }
+"ui.statusline" = { fg = "fg1" }
 
-"ui.cursor" = { fg = {} }
+"ui.cursor" = {}
 "ui.cursorline.primary" = { bg = "bg0_s" }
 "ui.cursorline.secondary" = { bg = "bg1" }
 "ui.cursor.insert" = { fg = "blue0", bg = "blue0" }
