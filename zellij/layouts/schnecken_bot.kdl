@@ -1,0 +1,23 @@
+layout {
+    tab name="Schnecken bot"{
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+        pane split_direction="horizontal" {
+            pane split_direction="vertical"{
+                pane name="Schnecken bot" command="cargo"{
+                    args "run" "--release"
+                    cwd "~/workspace/schnecken_bot"
+                }
+                pane command="hx"{
+                    cwd "~/workspace/schnecken_bot"
+                }
+        
+            }
+            pane size="30%" command="htop" 
+        }
+        pane size=1 borderless=true {
+            plugin location="status-bar"
+        }
+    }
+}

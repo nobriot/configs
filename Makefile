@@ -18,6 +18,10 @@ nvim: ## Installs nvim config
 tmux: ## Installs tmux config
 	cp -r ./tmux ~/.config/
 
+.PHONY: zellij
+zellij: ## Installs zellij config
+	cp -r ./zellij ~/.config/
+
 .PHONY: alacritty
 alacritty: ## Installs Alacritty config
 	cp -r ./alacritty ~/.config/

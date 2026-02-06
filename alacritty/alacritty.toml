@@ -10,6 +10,10 @@ option_as_alt = "OnlyLeft"
 [selection]
 save_to_clipboard = true
 
+[env]
+TERM = "alacritty"
+EDITOR = "/usr/bin/hx"
+
 [[hints.enabled]]
 regex = "[^ ]+\\.rs:\\d+:\\d+"
 command = { program = "code", args = ["--goto"] }
