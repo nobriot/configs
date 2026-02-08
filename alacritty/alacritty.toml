@@ -7,6 +7,12 @@ opacity = 0.95
 padding = { x = 10, y = 5 }
 option_as_alt = "OnlyLeft"
 
+[cursor]
+style = { shape = "Block" }
+
+[colors]
+vi_mode_cursor = { cursor = "#cc241d" } # Gruvbox red for selecting cursor
+
 [selection]
 save_to_clipboard = true
 
@@ -59,3 +65,9 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 #   # {key = "w", mods="Alt", chars =  "\u001b:wa\n" },
 #   # {key = "q", mods="Alt", chars =  "\u001b:qa\n" },
 # ]
+
+[keyboard]
+bindings = [
+  { key = "p", mods = "Alt", action = "Paste" },
+  # { key = "t", mods = "Alt", action = "CreateNewWindow" },
+]
