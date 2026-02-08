@@ -56,7 +56,7 @@ swap_tiled_layout name="editor" {
             pane name="editor" size="45%" 
             pane split_direction="horizontal"{
                 pane
-                pane
+                pane {children ;}
             }
         }
     }

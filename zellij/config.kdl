@@ -20,6 +20,12 @@ keybinds clear-defaults=true {
         bind "Alt m" { SwitchToMode "move"; }
         bind "Alt left" { GoToPreviousTab; }
         bind "Alt right" { GoToNextTab; }
+        bind "Alt t" {
+            NewTab {
+                layout "default"
+            }
+            SwitchToMode "locked"
+        }
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -116,6 +122,9 @@ keybinds clear-defaults=true {
         bind "Alt l" { MoveFocusOrTab "right"; SwitchToMode "locked"; }
         bind "s" { SwitchToMode "normal"; }
         bind "/" { SwitchToMode "search"; }
+    }
+    normal {
+        bind "Ctrl d" { Detach; }
     }
     search {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
