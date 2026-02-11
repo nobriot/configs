@@ -20,6 +20,8 @@ bindkey '^[[6~' end-of-buffer-or-history
 bindkey '^a' beginning-of-line
 # bindkey '^[[F' end-of-line                        # end
 # bindkey '^[[Z' undo                               # shift + tab undo last action
+# I want Alt + x for tmux
+bindkey -r '\ex'
 
 # Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

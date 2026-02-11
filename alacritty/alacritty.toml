@@ -69,5 +69,6 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 [keyboard]
 bindings = [
   { key = "p", mods = "Alt", action = "Paste" },
+  { key = "L", mods = "Control | Shift", chars = "\u001b[24~" }, # F12
   # { key = "t", mods = "Alt", action = "CreateNewWindow" },
 ]
