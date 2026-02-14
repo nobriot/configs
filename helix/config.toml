@@ -137,6 +137,7 @@ D = [
 "æ" = "@gla{}<left><esc>"
 "," = "@gla;<esc>"
 "å" = "@miw* /<ret>"
+"p" = "@\"%p"
 
 [keys.normal.space.u]
 c = ":pipe ccase --to camel"
