@@ -51,6 +51,7 @@ rulers = [88]
 
 [[language]]
 name = "html"
+file-types = ["html", "htm", "phtml"]
 language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 auto-format = true
