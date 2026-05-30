@@ -10,6 +10,10 @@ args = ["server"]
 command = "sg"
 args = ["lsp"]
 
+[language-server.emoji-lsp]
+command = "emoji-lsp"
+args = []
+
 [[language]]
 name = "rust"
 scope = "source.rust"
@@ -20,10 +24,12 @@ formatter = { command = "rustup", args = [
   "run",
   "nightly",
   "rustfmt",
-], stdin = false }
+  "--edition",
+  "2024",
+] }
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
-language-servers = ["rust-analyzer", "ast-grep"]
+language-servers = ["rust-analyzer", "ast-grep", "emoji-lsp"]
 rulers = [100]
 
 [language-server.rust-analyzer.config.check]
@@ -39,12 +45,12 @@ command = "clippy"
 
 [[language]]
 name = "markdown"
-language-servers = ["marksman"]
+language-servers = ["marksman", "emoji-lsp"]
 rulers = [80]
 
 [[language]]
 name = "python"
-language-servers = ["ruff", "pyrefly", "pyright", "ast-grep"]
+language-servers = ["ruff", "pyrefly", "pyright", "ast-grep", "emoji-lsp"]
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
 rulers = [88]
