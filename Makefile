@@ -37,3 +37,7 @@ gitconfig: ## Installs git config
 .PHONY: zshrc
 zshrc: ## Installs zshrc config
 	cp ./zsh/zshrc ~/.zshrc
+
+.PHONY: ubuntu
+ubuntu: ## Installs ubuntu scripts
+	cp -r ./ubuntu/*.sh ~/.local/bin/
