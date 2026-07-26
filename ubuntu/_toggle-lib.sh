@@ -5,8 +5,7 @@
 #     toggle_app "<wm_class_regex>" <launch-cmd> [args...]
 #
 # Behaviour:
-#   - a matching window is currently focused -> minimize it (toggle away)
-#   - a matching window exists but is not focused -> raise/activate it
+#   - a matching window exists -> raise/activate it (never minimizes)
 #   - no matching window -> launch the app
 #
 # How windows are found:
@@ -50,25 +49,13 @@ _wc_call() { # method winid
     --method "$WC_IFACE.$1" "$2" >/dev/null 2>&1
 }
 
-# Return 0 if an existing window was focused/minimized, 1 otherwise.
+# Return 0 if an existing window was focused, 1 otherwise.
 _wc_toggle() {
   local re="$1" json id
   json=$(_wc_json) || return 1
   [ -n "$json" ] || return 1
 
-  # Already-focused matching window -> minimize (toggle away).
-  id=$(printf '%s' "$json" | jq -r --arg re "$re" '
-        [ .[]
-          | select( ((.wm_class // "") | test($re; "i"))
-                 or ((.wm_class_instance // "") | test($re; "i")) )
-          | select(.focus == true) ]
-        | .[0].id // empty')
-  if [ -n "$id" ]; then
-    _wc_call Minimize "$id"
-    return 0
-  fi
-
-  # Otherwise raise the first match, preferring the current workspace.
+  # Raise the first match, preferring the current workspace.
   id=$(printf '%s' "$json" | jq -r --arg re "$re" '
         [ .[]
           | select( ((.wm_class // "") | test($re; "i"))
