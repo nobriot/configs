@@ -60,6 +60,7 @@ center = ["version-control"]
 right = [
   "total-line-numbers",
   "diagnostics",
+  "workspace-diagnostics",
   "selections",
   "register",
   "position",
@@ -120,6 +121,7 @@ D = [
   ":toggle inline-diagnostics.other-lines disable",
   ":toggle end-of-line-diagnostics disable",
 ]
+"e" = ":toggle-option file-picker.hidden"
 
 [keys.normal.space]
 "æ" = "@gla{}<left><esc>"

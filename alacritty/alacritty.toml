@@ -1,6 +1,9 @@
 [font]
 normal = { family = "MesloLGM Nerd Font", style = "Regular" }
 
+[general]
+live_config_reload = true
+
 [window]
 startup_mode = "Windowed"
 opacity = 0.95
@@ -15,6 +18,9 @@ vi_mode_cursor = { cursor = "#cc241d" } # Gruvbox red for selecting cursor
 
 [selection]
 save_to_clipboard = true
+
+[scrolling]
+multiplier = 5
 
 [env]
 TERM = "alacritty"
