@@ -78,6 +78,10 @@ newline = "none"
 
 [editor.soft-wrap]
 enable = true
+max-wrap = 25         # increase value to reduce forced mid-word wrapping
+max-indent-retain = 0
+# wrap-indicator = ""       # set wrap-indicator to "" to hide it
+wrap-at-text-width = true
 
 [keys.normal]
 "A-w" = ":wa"
@@ -97,22 +101,6 @@ left = ":buffer-previous"
 right = ":buffer-next"
 up = "move_selection_lines_up"                                   # Note: only works with my fork
 down = "move_selection_lines_down"                               # Note: only works with my fork
-# up = [
-#   "extend_to_line_bounds",
-#   "yank_main_selection_to_clipboard",
-#   "delete_selection",
-#   "move_line_up",
-#   "move_line_up",
-#   "paste_after",
-#   "keep_primary_selection",
-# ]
-# down = [
-#   "extend_to_line_bounds",
-#   "yank_main_selection_to_clipboard",
-#   "delete_selection",
-#   "paste_after",
-#   "keep_primary_selection",
-# ]
 esc = ["collapse_selection", "keep_primary_selection"]
 
 # Easy insertions
