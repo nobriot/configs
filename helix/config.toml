@@ -11,6 +11,7 @@ completion-replace = true
 rulers = [100]
 scrolloff = 12
 end-of-line-diagnostics = "disable"
+rainbow-brackets = false
 
 [editor.auto-pairs]
 '(' = ')'
@@ -86,7 +87,7 @@ wrap-at-text-width = true
 
 [keys.normal]
 "A-w" = ":wa"
-"A-X" = ":xa"
+"A-x" = ":xa"
 "A-q" = ":qa"
 "A-c" = ":bc"
 "H" = ["select_mode", "goto_first_nonwhitespace", "normal_mode"]
