@@ -164,7 +164,6 @@ then
 fi
 eval "$(atuin init zsh)"
 
-
 # Added by alacritty
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 

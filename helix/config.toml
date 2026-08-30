@@ -9,6 +9,7 @@ bufferline = "multiple"
 line-number = "relative"
 completion-replace = true
 rulers = [100]
+text-width = 100
 scrolloff = 12
 end-of-line-diagnostics = "disable"
 rainbow-brackets = false
@@ -80,10 +81,9 @@ newline = "none"
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 25         # increase value to reduce forced mid-word wrapping
+max-wrap = 5               # increase value to reduce forced mid-word wrapping
 max-indent-retain = 0
-# wrap-indicator = ""       # set wrap-indicator to "" to hide it
-wrap-at-text-width = true
+wrap-at-text-width = false
 
 [keys.normal]
 "A-w" = ":wa"

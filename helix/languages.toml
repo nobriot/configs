@@ -47,6 +47,7 @@ command = "clippy"
 name = "markdown"
 language-servers = ["marksman", "emoji-lsp"]
 rulers = [80]
+text-width = 80
 
 [[language]]
 name = "python"
