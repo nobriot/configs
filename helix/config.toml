@@ -86,6 +86,7 @@ max-indent-retain = 0
 wrap-at-text-width = false
 
 [keys.normal]
+"A-r" = ":rla"
 "A-w" = ":wa"
 "A-x" = ":xa"
 "A-q" = ":qa"

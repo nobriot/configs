@@ -106,8 +106,8 @@ auto-format = true
 
 [[language]]
 name = "dockerfile"
-file-types = { glob = "Dockerfile*" }
+file-types = [{ glob = "Dockerfile*" }]
 
 [[language]]
 name = "make"
-file-types = { glob = "Makefile*" }
+file-types = [{ glob = "Makefile*" }]
