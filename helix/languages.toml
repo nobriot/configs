@@ -111,3 +111,7 @@ file-types = [{ glob = "Dockerfile*" }]
 [[language]]
 name = "make"
 file-types = [{ glob = "Makefile*" }]
+
+[[language]]
+name = "php"
+file-types = ["phtml"]

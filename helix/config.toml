@@ -148,7 +148,7 @@ u = "switch_case"
 esc = ["collapse_selection", "normal_mode"]
 
 [keys.select.space.u]
-c = ":pipe ccase --to camel"
+c = ":pipe ccase --to camel"      # cargo install --git https://github.com/stringcase/ccase
 C = ":pipe ccase --to Uppercamel"
 s = ":pipe ccase --to snake"
 l = ":pipe ccase --to lower"
