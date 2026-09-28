@@ -11,7 +11,7 @@ command = "sg"
 args = ["lsp"]
 
 [language-server.emoji-lsp]
-command = "emoji-lsp"
+command = "emoji-lsp" # cargo install --git https://github.com/nobriot/emoji-lsp
 args = []
 
 [[language]]
@@ -58,7 +58,7 @@ rulers = [88]
 
 [[language]]
 name = "html"
-file-types = ["html", "htm", "phtml"]
+file-types = ["html", "htm", "phtml", "php"]
 language-servers = [
   "vscode-html-language-server",
   "tailwindcss-ls",
@@ -111,7 +111,3 @@ file-types = [{ glob = "Dockerfile*" }]
 [[language]]
 name = "make"
 file-types = [{ glob = "Makefile*" }]
-
-[[language]]
-name = "php"
-file-types = ["phtml"]

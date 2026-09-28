@@ -99,11 +99,11 @@ Y = ["extend_to_line_end", "yank"]
 X = ["extend_line_above"]
 j = "move_visual_line_down"
 k = "move_visual_line_up"
-"ret" = ["open_below", "normal_mode"]
+# "ret" = ["open_below", "normal_mode"]
 left = ":buffer-previous"
 right = ":buffer-next"
-up = "move_selection_lines_up"                                   # Note: only works with my fork
-down = "move_selection_lines_down"                               # Note: only works with my fork
+# up = "move_selection_lines_up"                         # Note: only works with my fork
+# down = "move_selection_lines_down"                     # Note: only works with my fork
 esc = ["collapse_selection", "keep_primary_selection"]
 
 # Easy insertions
