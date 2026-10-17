@@ -15,14 +15,21 @@ UUID="window-calls@domandoman.xyz"
 # the gsettings enabled-extensions list directly — the shell reads that list
 # on login and enables the extension then.
 _enable() {
-  gsettings get org.gnome.shell enabled-extensions \
-    | python3 -c "
-import ast, sys
-l = ast.literal_eval(sys.stdin.read() or '[]')
+  # gsettings may prefix typed output (e.g. "@as []"). Extract the list
+  # portion robustly and update it. Avoid xargs to preserve quoting.
+  local list
+  list=$(gsettings get org.gnome.shell enabled-extensions | python3 - <<'PY'
+import sys, ast, re
+s = sys.stdin.read()
+m = re.search(r'(\[.*\])', s, re.S)
+txt = m.group(1) if m else '[]'
+l = ast.literal_eval(txt)
 l = l if isinstance(l, list) else []
 if '$UUID' not in l: l.append('$UUID')
 sys.stdout.write(str(l))
-" | xargs -0 gsettings set org.gnome.shell enabled-extensions
+PY
+)
+  gsettings set org.gnome.shell enabled-extensions "$list"
 }
 
 if gnome-extensions info "$UUID" >/dev/null 2>&1; then

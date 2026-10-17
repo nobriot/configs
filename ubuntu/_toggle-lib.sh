@@ -52,7 +52,14 @@ _wc_call() { # method winid
 # Return 0 if an existing window was focused, 1 otherwise.
 _wc_toggle() {
   local re="$1" json id
-  json=$(_wc_json) || return 1
+  json=$(_wc_json) || {
+    # On Wayland (GNOME), focusing native windows requires the Window Calls
+    # extension. Give a clear message so keyboard-shortcut environments show why
+    # focusing failed and how to fix it.
+    printf '%s\n' "Window Calls GNOME extension not available or not responding; native Wayland windows cannot be focused without it." >&2
+    printf '%s\n' "Install it with: %s/install-window-calls.sh and then log out/back in." "$DIR" >&2
+    return 1
+  }
   [ -n "$json" ] || return 1
 
   # Raise the first match, preferring the current workspace.

@@ -9,4 +9,6 @@ source "$DIR/_toggle-lib.sh"
 # Keyboard-shortcut environments often have a minimal PATH.
 export PATH="$PATH:/snap/bin:/usr/local/bin:/usr/bin"
 
-toggle_app "^signal$" signal-desktop
+# Match several possible WM_CLASS values for Signal Desktop.
+# Check actual value with: wmctrl -lx  (or use the Window Calls extension)
+toggle_app "signal|Signal|signal-desktop|SignalDesktop" signal-desktop
